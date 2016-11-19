@@ -1,6 +1,7 @@
 package org.rishabh.springmvc.controller;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,9 +19,9 @@ public class HomeController {
 	}*/
 	
 	@RequestMapping(value="/welcome/{pathname}")
-	public ModelAndView test(@PathVariable("pathname") String userName){
+	public ModelAndView test(@PathVariable Map<String,String> pathVars){
 		ModelAndView model = new ModelAndView("home");
-		model.addObject("message", "the first spring mvc at path"+userName);
+		model.addObject("message", "the first spring mvc at path"+pathVars.get("pathname"));
 		return model;
 	}
 	
