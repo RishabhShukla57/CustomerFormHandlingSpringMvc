@@ -1,9 +1,36 @@
 package org.rishabh.springmvc.model;
 
+import java.util.Date;
+import java.util.List;
+
 public class Student {
-	String name;
-	int id;
-	String password;
+	private String name;
+	private int id;
+	private String password;
+	private Date date;
+	private List<String> subjects;
+	private Address address;
+	
+	
+	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public List<String> getSubjects() {
+		return subjects;
+	}
+	public void setSubjects(List<String> subjects) {
+		this.subjects = subjects;
+	}
 	public String getName() {
 		return name;
 	}

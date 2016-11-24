@@ -11,8 +11,20 @@
 </center>
 
   Name:<br>
-  ${student.name} <br>
+  ${student.name} <br><br>
   Id:<br>
   ${student.id}<br><br>
+  DOB:<br>
+  ${student.date}<br><br>
+  Subject:<br>
+  ${student.subjects}<br><br>
+  <table>
+<tr>
+<td>Country:${student.address.country}</td>
+<td>State:${student.address.state}</td>
+<td>City:${student.address.city}</td>
+<td>Pincode:${student.address.pincode}</td>
+</tr>
+</table>
 </body>
 </html>
