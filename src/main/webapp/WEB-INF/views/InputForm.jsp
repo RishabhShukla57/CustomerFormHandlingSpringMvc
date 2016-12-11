@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <title>${message}</title>
@@ -8,14 +10,14 @@
 <center>
 <h1>${message}</h1>
 </center>
-
+<form:errors path="student.*"></form:errors>
 <form action="loginSuccess.html" method  ="post">
   Name:<br>
   <input type="text" name="name"><br>
   Id:<br>
   <input type="text" name="id"><br><br>
   DOB:<br>
-  <input type="text" name="date"><br><br>
+  <input type="text" name="date"><br><br>	
   Subject:<br>
   <select name="subjects">
   <option value="hindi">Hindi</option>

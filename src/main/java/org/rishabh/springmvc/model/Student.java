@@ -3,16 +3,17 @@ package org.rishabh.springmvc.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.constraints.Size;
+
 public class Student {
+	
+	@Size(max=10,min=3)
 	private String name;
 	private int id;
 	private String password;
 	private Date date;
 	private List<String> subjects;
 	private Address address;
-	
-	
-	
 	public Address getAddress() {
 		return address;
 	}
